@@ -1,0 +1,38 @@
+{
+  "created_utc": "2026-10-19T12:23:59.464913+00:00",
+  "model": {
+    "model_name": "NousResearch/Llama-2-7b-chat-hf",
+    "revision": "351844e75ed0bcbbe3f10671b3c808d2b83894ee",
+    "quantization": "NF4 double quantization; float16 compute",
+    "chunk_tokens": 256,
+    "iterative_size": 200,
+    "condition_in_question": "after",
+    "condition_compare": true,
+    "reorder_context": "sort",
+    "dynamic_context_compression_ratio": 0.3,
+    "context_budget": "+100"
+  },
+  "files_sha256": {
+    "models/llama2-chat/added_tokens.json": "39c257654f85e478a9cb3bf34da53b3e4625e7b05ce15f193fe41724fae7b825",
+    "models/llama2-chat/config.json": "3c66a81e29ce617a74ff2e4055e7fb275b5c9457103864745693fbce59b368a2",
+    "models/llama2-chat/generation_config.json": "7495350e3f00cac9cb72be86f453c25ed10d2eb8a48a27e9d120428df9015c11",
+    "models/llama2-chat/LICENSE.txt": "8c17c2ebb0ea011be9981cc3922db8ca8fa61e828c5d3f44cb6ae342bf80460b",
+    "models/llama2-chat/model-00001-of-00002.safetensors": "66dec18c9f1705b9387d62f8485f4e7d871ca388718786737ed3c72dbfaac9fb",
+    "models/llama2-chat/model-00002-of-00002.safetensors": "0fd6895090da1b2ccffdb93964847709a3b31e6b69fe7dc5a480dce37c811b1d",
+    "models/llama2-chat/model.safetensors.index.json": "11b694a9d4bffdac71733db7f782be0df1f87a65fb9ef05bcf6d317029c22364",
+    "models/llama2-chat/pytorch_model.bin.index.json": "773618361c0b7570f0ea528dc07b9c127018231316a548ec4ddfb87cd0dcecf0",
+    "models/llama2-chat/README.md": "fd57957851f54ad8fe00d1381b9122ace6f63fe1abc34a1507b8ec6afa7fbaf2",
+    "models/llama2-chat/special_tokens_map.json": "2ea88203b955648951a454e73a73967ff77ba4e79ae8ceb4400d4ab2cb040777",
+    "models/llama2-chat/tokenizer.json": "f7b50bcf6d6672eade5e43514d48e9c1e4e63a56aef7b14acdaca94ce93436f7",
+    "models/llama2-chat/tokenizer.model": "9e556afd44213b6bd1be2b850ebbbd98f5481437a8021afaf58ee7fb1818d347",
+    "models/llama2-chat/tokenizer_config.json": "37951d5a1e0c6a77f88c61f79972f17e889b62258aadff4c61eacd3fb567fe72",
+    "models/llama2-chat/USE_POLICY.md": "7c23fb36d80141c4ab8cdbb61ee4790102ebd2bf7aeff414453177d4f2110e5d"
+  },
+  "library_sha256": {
+    "prompt_compressor.py": "472fde8f6f55f273fe94eee40c25c73508f1ed3a7f5d61788636c20fc4be5068",
+    "utils.py": "1ed3eb0734354ea0136a0d98a9366233a872d22ff350fab107e53de45c954e33",
+    "version.py": "3483a54fdd5e324be2a4494fb03afb200ba17ee768036de5e3b6b91fc2679224",
+    "__init__.py": "68327923b97309c7f8ca1ca4150592b21c7fdadbdc38536ae4e4357de8b90d47"
+  },
+  "library_version": "0.2.2"
+}

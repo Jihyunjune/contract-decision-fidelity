@@ -1,0 +1,95 @@
+{
+  "release_status": "READY_FOR_USER_PUBLICATION_APPROVAL",
+  "license": "MIT; rights holder confirmed",
+  "original_preservation": {
+    "v1": {
+      "files": 24239,
+      "bytes": 2789487016,
+      "all_sha256_unchanged": true,
+      "added": 0,
+      "removed": 0
+    },
+    "v2": {
+      "files": 42398,
+      "bytes": 25412342199,
+      "all_sha256_unchanged": true,
+      "added": 0,
+      "removed": 0
+    }
+  },
+  "official_data": {
+    "documents": 607,
+    "train": 423,
+    "dev": 61,
+    "test": 123,
+    "historical_partition_hashes_equal": true
+  },
+  "pytest": {
+    "with_prepared_data": {
+      "passed": 28,
+      "skipped": 0
+    },
+    "clean_export": {
+      "passed": 27,
+      "skipped": 1,
+      "skip_reason": "Official data intentionally absent"
+    },
+    "warnings": "2 SWIG deprecation warnings"
+  },
+  "static_checks": {
+    "ruff_critical_rules": "passed",
+    "ruff_format": "passed",
+    "mypy": "passed for 2 schema modules; not repository-wide strict typing",
+    "pip_check": "passed"
+  },
+  "equivalence": {
+    "ast_function_equivalence": {
+      "src/evaluation/metrics.py": 6,
+      "src/decision/pipeline.py": 6,
+      "cdfv2/decision.py": 1,
+      "cdfv2/summaries.py": 5,
+      "cdfv2/compression.py": 2,
+      "cdfv2/evaluate.py": 1,
+      "cdfv2/runner.py": 5
+    },
+    "method_metrics_equal": true,
+    "paired_ci95_equal": true,
+    "judgments_replayed": 6800,
+    "model_calls": 0,
+    "bootstrap_replicates": 5000,
+    "note": "Historical private outputs copied into ignored local audit directory solely for evaluation equivalence; not newly generated predictions."
+  },
+  "real_smoke": {
+    "purpose": "Release interface validation, not final study regeneration",
+    "document_id": 226,
+    "hypothesis_id": "nda-11",
+    "summary_statuses": {
+      "naive": "SUCCESS",
+      "contextual": "SUCCESS"
+    },
+    "compression_status": "SUCCESS",
+    "judgment_statuses": {
+      "original": "SUCCESS",
+      "naive": "SUCCESS",
+      "contextual": "SUCCESS",
+      "long_30": "SUCCESS"
+    },
+    "judgments": 4
+  },
+  "offline_dashboard": "AppTest plus actual local headless browser; screenshot inspected",
+  "gitleaks": {
+    "version": "v8.30.1",
+    "archive_sha256": "d29144deff3a68aa93ced33dddf84b7fdc26070add4aa0f4513094c8332afc4e",
+    "source": "https://github.com/gitleaks/gitleaks/releases/download/v8.30.1/gitleaks_8.30.1_windows_x64.zip",
+    "exit_code": 0,
+    "confirmed_secrets": 0,
+    "initial_false_positives": 10,
+    "exception": "Only known token-related file keys with 64-hex SHA-256 checksums in named manifests"
+  },
+  "data_and_weights_distributed": false,
+  "historical_predictions_regenerated": false,
+  "public_reproduction_lock_sha256": "94ebdc9cf9cce353f1584ff8b68541af4672c0e3891de7b866b5dc85840157fe",
+  "github_repository_created": false,
+  "pushed": false,
+  "git": "main initialized and files staged; no remote or commit"
+}

@@ -1,0 +1,37 @@
+{
+  "scope": "Post-evaluation description of stored validation fields; substring checks do not establish semantic support",
+  "methods": {
+    "original": {
+      "rows": 1700,
+      "valid_rows": 1700,
+      "nonempty_quotes": 1365,
+      "substring_valid_quotes": 934,
+      "invalid_quotes": 431,
+      "missing_usage_attempts": 0
+    },
+    "naive": {
+      "rows": 1700,
+      "valid_rows": 1700,
+      "nonempty_quotes": 869,
+      "substring_valid_quotes": 855,
+      "invalid_quotes": 14,
+      "missing_usage_attempts": 0
+    },
+    "contextual": {
+      "rows": 1700,
+      "valid_rows": 1700,
+      "nonempty_quotes": 937,
+      "substring_valid_quotes": 923,
+      "invalid_quotes": 14,
+      "missing_usage_attempts": 0
+    },
+    "long_30": {
+      "rows": 1700,
+      "valid_rows": 1700,
+      "nonempty_quotes": 1073,
+      "substring_valid_quotes": 786,
+      "invalid_quotes": 287,
+      "missing_usage_attempts": 0
+    }
+  }
+}

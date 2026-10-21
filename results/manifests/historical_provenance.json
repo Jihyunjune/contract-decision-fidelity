@@ -1,0 +1,59 @@
+{
+  "description": "Previously measured v2 results; no 6800-judgment rerun during release packaging. Raw text, quotes and weights excluded.",
+  "original_lock_sha256": "f5624f7c67b97152b0fba2aa1887aa616b681cab7e8537faa2f5de7fadd72fe0",
+  "published_files_sha256": {
+    "results/published/development.json": "24a975eef6a30bb282cc24aab845dc8767e64eb8d77a282cdd9059050a160f47",
+    "results/published/development_comparison.csv": "4cd17ff70da548d8bff5bd3a5356cfa798f0a336a096c4a0bddf8d490a8bb331",
+    "results/published/output_and_quote_audit.json": "10b63967d738f29954035e3d0422745b5bf4d4fb5dadb347205009e2e0b34416",
+    "results/published/sealed.json": "a803ab5af6d394943927978e809f7131ef22d4cb36246412878cf98cf54b0569",
+    "results/published/sealed_comparison.csv": "e07d5a50d6a23bb374dc58a157be0b8918c58733359aaf133a1f82b306de2491"
+  },
+  "source_files_sha256": {
+    "v1": {
+      "src/cli.py": "0baa5e052dd69e100d5cecb2c869be2aa6c91e65056ac29b99d39b1120fb0a36",
+      "src/common.py": "6409a4459813f49deee5d818423a47697851cd99506af5743bf2f66cc72ac18c",
+      "src/demo.py": "418db81dc067c2999132d14a222bd71d9eb0c82fef9d85f3a2b2768f06342331",
+      "src/locking.py": "a287fd0a98cf873cd42d0da204a4473e5d788eabfad5136f38a0e3318f37f3aa",
+      "src/runner.py": "50942cdfbe66cb20bfd3db4d93af55496adaba42a3dbcef705baa81212c4790c",
+      "src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "src/analysis/cases.py": "ef54d6de1759cb287d22e34a9e503335dd8c5b80d6b7a96005e9cc8f6350b9c5",
+      "src/analysis/plots.py": "bdf591b0c8beb165fb69caf59469ae6db4eebbb656bb8750a4e5a96d885fd4d1",
+      "src/analysis/reporting.py": "3d92aa4d8ceba2e6894b1a1c37c257f75117db9c08e097abc2db9bf9bfd0ac96",
+      "src/analysis/views.py": "1f7abbaf3c5c092d23b157124c22ed34f7440252ece667feca70f9cc180eb736",
+      "src/analysis/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "src/data/audit.py": "7c706c4699d8cb2011e9c29417e5c015c14172b7099517a3307dccfaf994b59a",
+      "src/data/inputs.py": "1de97ed59a2609cb5665bc633a46006a235b422311f34715484191d08abb94ec",
+      "src/data/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "src/decision/pipeline.py": "c0c48d05a6c90da17ccac653ca0b044167b21eaa6783d45b69c3d22dd4e3a70f",
+      "src/decision/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "src/evaluation/metrics.py": "13e4a9c19ca4760a0c09045fc2cbc3e5ed1c497fa1a5c46f05c176f57e546e9b",
+      "src/evaluation/run.py": "56c4d806cbd6265c5de8dbeef192b1e21cddc6985565e3ac37321fb639a11e8e",
+      "src/evaluation/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "src/models/ollama.py": "05ff7ea9c365fd3eea55a19b9adf8d124a3d5bb77386ce18ab8e395786fe496a",
+      "src/models/tokenization.py": "ee1f0626b242d1064eddb2c7cc8c6d86f5182401ccbce1074383cceea01d9ccb",
+      "src/models/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "src/summarization/pipeline.py": "b21f673d97d804d3a89d644def895d66f6af937db748f32aa8974d1ad3c56722",
+      "src/summarization/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "prompts/contextual_summary_v1.txt": "9915d298eb29cf7da28fc947b7185148337ccc172be5a53190b49f6688a712fa",
+      "prompts/naive_summary_v1.txt": "c761343847b001b93eb42d90142caa22116b6578408b282b23a5f5e61fae9767",
+      "prompts/nli_decision_v1.txt": "d587fc48e4c06166c11d8c72132cd85dfd03279fee57ea4ebc0ca9965a8c6146"
+    },
+    "v2": {
+      "cdfv2/cli.py": "1ddc96da1434163218c0bc5c95f9a0dd7fc5678fce5e56a002e1d18552e4624f",
+      "cdfv2/common.py": "908c310d66746a9b4b61209d467d3f695c3caf6fcc9dd2067a1d45e84adb9c74",
+      "cdfv2/compression.py": "ffe019242348e033d46e6035d14e5c09cc5416a4d615b1a9d1e3ebd5c0146845",
+      "cdfv2/decision.py": "b1999af038846e699eb6e757fcaa09955f752f388521aeff8340803d09266054",
+      "cdfv2/evaluate.py": "480a92040f8158d689850b5b4bda22534be84b132ea3946319bb7513fba2abeb",
+      "cdfv2/inputs.py": "82ee832b4771b786a71760a115e5c1f8e08de405658f61b284d47e55a1aa9d63",
+      "cdfv2/locking.py": "4f5dbf134191a3a156b08c5e71dfa961955d5eded8ffbfe69288861c75fc6bf1",
+      "cdfv2/reporting.py": "1fd8edc0161308cf15c4e6cc314befc5eb608bc64cfd7896344d4e32b8dd98dc",
+      "cdfv2/runner.py": "947bd2ea925e796068be9d0e59083410eefd5af33d968fb4775a8306bd5a64d6",
+      "cdfv2/runtime.py": "99f021f9be7fb7827cc5b5f08b1ac911d5737ac60f6de4a03c6854b1a324560c",
+      "cdfv2/summaries.py": "02cd1990bc3f6e4e732911ff06fd3b6403f2b8db1582a2d4007ed1d4dee60e75",
+      "cdfv2/__init__.py": "e7622a3eb65e6f43eb9c4a8204c83944ea81c70aba6abc1178e22ecbf6a6dfd7",
+      "prompts/contextual_summary_v2.txt": "de5161eb815eed7db42a109c5b952bc457d97b9aa9ba1493acc89f016208085d",
+      "prompts/naive_summary_v2.txt": "baa439a2246dbade83601bd8f527e7313877c8f87ecd85860c856171e2631078",
+      "configs/experiment.json": "c6e9af89f1762ca59b3c9e5b4f0ece52ca1fd2f2983729fb6e0d6dced31fdf21"
+    }
+  }
+}

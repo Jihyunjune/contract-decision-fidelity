@@ -1,0 +1,951 @@
+{
+  "methods": {
+    "original": {
+      "strict_accuracy": 0.6568627450980392,
+      "valid_accuracy": 0.6568627450980392,
+      "macro_f1": 0.5977225322735217,
+      "coverage": 1.0,
+      "n": 408,
+      "valid_n": 408,
+      "failure_n": 0,
+      "class_metrics": {
+        "Entailment": {
+          "precision": 0.7737556561085973,
+          "recall": 0.7880184331797235,
+          "f1": 0.7808219178082192,
+          "support": 217
+        },
+        "Contradiction": {
+          "precision": 0.30578512396694213,
+          "recall": 0.9024390243902439,
+          "f1": 0.4567901234567901,
+          "support": 41
+        },
+        "NotMentioned": {
+          "precision": 0.9090909090909091,
+          "recall": 0.4,
+          "f1": 0.5555555555555556,
+          "support": 150
+        }
+      },
+      "confusion_matrix": [
+        [
+          171,
+          40,
+          6,
+          0
+        ],
+        [
+          4,
+          37,
+          0,
+          0
+        ],
+        [
+          46,
+          44,
+          60,
+          0
+        ]
+      ],
+      "confusion_columns": [
+        "Entailment",
+        "Contradiction",
+        "NotMentioned",
+        "FAILED"
+      ],
+      "decision_flip_rate": 0.0,
+      "error_introduced_rate_all": 0.0,
+      "error_corrected_rate_all": 0.0,
+      "ci95": {
+        "strict_accuracy": {
+          "interval": [
+            0.6053921568627451,
+            0.7034313725490197
+          ],
+          "defined_replicates": 5000
+        },
+        "valid_accuracy": {
+          "interval": [
+            0.6053921568627451,
+            0.7034313725490197
+          ],
+          "defined_replicates": 5000
+        },
+        "macro_f1": {
+          "interval": [
+            0.5343733191968587,
+            0.6518112693064099
+          ],
+          "defined_replicates": 5000
+        },
+        "decision_flip_rate": {
+          "interval": [
+            0.0,
+            0.0
+          ],
+          "defined_replicates": 5000
+        }
+      },
+      "output_failure_rate": 0.0,
+      "nli_latency_seconds": 335.9337962999998,
+      "nli_input_tokens": 1144750,
+      "nli_output_tokens": 39612,
+      "nli_attempts": 408,
+      "first_attempt_valid_rate": 1.0,
+      "exact_quote_valid_rate": 0.7105263157894737,
+      "compression_ratio": {
+        "mean": 1.0,
+        "median": 1.0,
+        "p25": 1.0,
+        "p75": 1.0
+      },
+      "preparation_latency_seconds": 0.0,
+      "preparation_input_tokens": 0,
+      "preparation_output_tokens": 0,
+      "compressor_forward_tokens": 0,
+      "accumulated_context_tokens_all_17": 1021020,
+      "total_latency_seconds": 335.9337962999998,
+      "total_ollama_tokens": 1184362,
+      "mean_nli_latency": 0.8233671477941172,
+      "p95_nli_latency": 1.4048135700002604,
+      "external_api_cost_usd": 0,
+      "electricity_cost": "not measured",
+      "observed_stage_wall_seconds_including_process_and_model_load": 341.09664939999857,
+      "common_valid_with_original_naive": {
+        "n": 408,
+        "accuracy": 0.6568627450980392,
+        "naive_accuracy": 0.47058823529411764,
+        "original_accuracy": 0.6568627450980392
+      }
+    },
+    "naive": {
+      "strict_accuracy": 0.47058823529411764,
+      "valid_accuracy": 0.47058823529411764,
+      "macro_f1": 0.43496826738584976,
+      "coverage": 1.0,
+      "n": 408,
+      "valid_n": 408,
+      "failure_n": 0,
+      "class_metrics": {
+        "Entailment": {
+          "precision": 0.8051948051948052,
+          "recall": 0.2857142857142857,
+          "f1": 0.4217687074829932,
+          "support": 217
+        },
+        "Contradiction": {
+          "precision": 0.16083916083916083,
+          "recall": 0.5609756097560976,
+          "f1": 0.25,
+          "support": 41
+        },
+        "NotMentioned": {
+          "precision": 0.5691489361702128,
+          "recall": 0.7133333333333334,
+          "f1": 0.6331360946745562,
+          "support": 150
+        }
+      },
+      "confusion_matrix": [
+        [
+          62,
+          91,
+          64,
+          0
+        ],
+        [
+          1,
+          23,
+          17,
+          0
+        ],
+        [
+          14,
+          29,
+          107,
+          0
+        ]
+      ],
+      "confusion_columns": [
+        "Entailment",
+        "Contradiction",
+        "NotMentioned",
+        "FAILED"
+      ],
+      "valid_pair_n": 408,
+      "flip_n": 210,
+      "decision_flip_rate": 0.5147058823529411,
+      "pair_failure_n": 0,
+      "failure_or_flip_rate_all": 0.5147058823529411,
+      "correct_preserved": 137,
+      "error_introduced": 131,
+      "error_corrected": 55,
+      "error_persisted": 85,
+      "error_introduced_rate_all": 0.32107843137254904,
+      "error_introduced_given_original_correct": 0.48880597014925375,
+      "error_corrected_rate_all": 0.13480392156862744,
+      "strict_accuracy_change": -0.18627450980392157,
+      "category_definition": "All cases, failures are incorrect; flip uses valid pairs only",
+      "ci95": {
+        "strict_accuracy": {
+          "interval": [
+            0.40441176470588236,
+            0.5416666666666666
+          ],
+          "defined_replicates": 5000
+        },
+        "valid_accuracy": {
+          "interval": [
+            0.40441176470588236,
+            0.5416666666666666
+          ],
+          "defined_replicates": 5000
+        },
+        "macro_f1": {
+          "interval": [
+            0.3731415780568421,
+            0.5010012692513012
+          ],
+          "defined_replicates": 5000
+        },
+        "decision_flip_rate": {
+          "interval": [
+            0.4338235294117647,
+            0.5931372549019608
+          ],
+          "defined_replicates": 5000
+        }
+      },
+      "output_failure_rate": 0.0,
+      "nli_latency_seconds": 180.26627140000164,
+      "nli_input_tokens": 191356,
+      "nli_output_tokens": 22019,
+      "nli_attempts": 408,
+      "first_attempt_valid_rate": 1.0,
+      "exact_quote_valid_rate": 0.9545454545454546,
+      "summary_failures": 0,
+      "summary_attempts": 24,
+      "summary_mean_words": 142.08333333333334,
+      "summary_max_words": 188,
+      "summary_first_attempt_valid_rate": 1.0,
+      "summary_errors": {},
+      "compression_ratio": {
+        "mean": 0.10823745267658663,
+        "median": 0.08951928100500961,
+        "p25": 0.050367115879913694,
+        "p75": 0.1343877124004905
+      },
+      "preparation_latency_seconds": 45.86528649999491,
+      "preparation_input_tokens": 63444,
+      "preparation_output_tokens": 5057,
+      "compressor_forward_tokens": 0,
+      "accumulated_context_tokens_all_17": 76653,
+      "total_latency_seconds": 226.13155789999655,
+      "total_ollama_tokens": 281876,
+      "mean_nli_latency": 0.44182909656863145,
+      "p95_nli_latency": 0.5438344650011459,
+      "external_api_cost_usd": 0,
+      "electricity_cost": "not measured",
+      "observed_stage_wall_seconds_including_process_and_model_load": 233.52708800000073,
+      "common_valid_with_original_naive": {
+        "n": 408,
+        "accuracy": 0.47058823529411764,
+        "naive_accuracy": 0.47058823529411764,
+        "original_accuracy": 0.6568627450980392
+      }
+    },
+    "contextual": {
+      "strict_accuracy": 0.5122549019607843,
+      "valid_accuracy": 0.5122549019607843,
+      "macro_f1": 0.47583902787840904,
+      "coverage": 1.0,
+      "n": 408,
+      "valid_n": 408,
+      "failure_n": 0,
+      "class_metrics": {
+        "Entailment": {
+          "precision": 0.8282828282828283,
+          "recall": 0.3778801843317972,
+          "f1": 0.5189873417721519,
+          "support": 217
+        },
+        "Contradiction": {
+          "precision": 0.17777777777777778,
+          "recall": 0.5853658536585366,
+          "f1": 0.2727272727272727,
+          "support": 41
+        },
+        "NotMentioned": {
+          "precision": 0.5919540229885057,
+          "recall": 0.6866666666666666,
+          "f1": 0.6358024691358025,
+          "support": 150
+        }
+      },
+      "confusion_matrix": [
+        [
+          82,
+          81,
+          54,
+          0
+        ],
+        [
+          0,
+          24,
+          17,
+          0
+        ],
+        [
+          17,
+          30,
+          103,
+          0
+        ]
+      ],
+      "confusion_columns": [
+        "Entailment",
+        "Contradiction",
+        "NotMentioned",
+        "FAILED"
+      ],
+      "valid_pair_n": 408,
+      "flip_n": 184,
+      "decision_flip_rate": 0.45098039215686275,
+      "pair_failure_n": 0,
+      "failure_or_flip_rate_all": 0.45098039215686275,
+      "correct_preserved": 157,
+      "error_introduced": 111,
+      "error_corrected": 52,
+      "error_persisted": 88,
+      "error_introduced_rate_all": 0.27205882352941174,
+      "error_introduced_given_original_correct": 0.4141791044776119,
+      "error_corrected_rate_all": 0.12745098039215685,
+      "strict_accuracy_change": -0.14460784313725492,
+      "category_definition": "All cases, failures are incorrect; flip uses valid pairs only",
+      "ci95": {
+        "strict_accuracy": {
+          "interval": [
+            0.4583333333333333,
+            0.5759803921568627
+          ],
+          "defined_replicates": 5000
+        },
+        "valid_accuracy": {
+          "interval": [
+            0.4583333333333333,
+            0.5759803921568627
+          ],
+          "defined_replicates": 5000
+        },
+        "macro_f1": {
+          "interval": [
+            0.4235869230336661,
+            0.533271977747158
+          ],
+          "defined_replicates": 5000
+        },
+        "decision_flip_rate": {
+          "interval": [
+            0.3700980392156863,
+            0.5245098039215687
+          ],
+          "defined_replicates": 5000
+        }
+      },
+      "output_failure_rate": 0.0,
+      "nli_latency_seconds": 187.64457590001257,
+      "nli_input_tokens": 204718,
+      "nli_output_tokens": 23138,
+      "nli_attempts": 408,
+      "first_attempt_valid_rate": 1.0,
+      "exact_quote_valid_rate": 0.9529914529914529,
+      "summary_failures": 0,
+      "summary_attempts": 24,
+      "summary_mean_words": 168.875,
+      "summary_max_words": 215,
+      "summary_first_attempt_valid_rate": 1.0,
+      "summary_errors": {},
+      "compression_ratio": {
+        "mean": 0.12428468365085309,
+        "median": 0.09668629140497619,
+        "p25": 0.07428274595451656,
+        "p75": 0.15368866418825544
+      },
+      "preparation_latency_seconds": 46.75097049999931,
+      "preparation_input_tokens": 66372,
+      "preparation_output_tokens": 5839,
+      "compressor_forward_tokens": 0,
+      "accumulated_context_tokens_all_17": 89845,
+      "total_latency_seconds": 234.39554640001188,
+      "total_ollama_tokens": 300067,
+      "mean_nli_latency": 0.459913176225521,
+      "p95_nli_latency": 0.5768150749993765,
+      "external_api_cost_usd": 0,
+      "electricity_cost": "not measured",
+      "observed_stage_wall_seconds_including_process_and_model_load": 241.7134589999987,
+      "common_valid_with_original_naive": {
+        "n": 408,
+        "accuracy": 0.5122549019607843,
+        "naive_accuracy": 0.47058823529411764,
+        "original_accuracy": 0.6568627450980392
+      }
+    },
+    "long_15": {
+      "strict_accuracy": 0.5269607843137255,
+      "valid_accuracy": 0.5269607843137255,
+      "macro_f1": 0.4903020131144092,
+      "coverage": 1.0,
+      "n": 408,
+      "valid_n": 408,
+      "failure_n": 0,
+      "class_metrics": {
+        "Entailment": {
+          "precision": 0.7463768115942029,
+          "recall": 0.47465437788018433,
+          "f1": 0.5802816901408451,
+          "support": 217
+        },
+        "Contradiction": {
+          "precision": 0.211864406779661,
+          "recall": 0.6097560975609756,
+          "f1": 0.31446540880503143,
+          "support": 41
+        },
+        "NotMentioned": {
+          "precision": 0.5723684210526315,
+          "recall": 0.58,
+          "f1": 0.5761589403973509,
+          "support": 150
+        }
+      },
+      "confusion_matrix": [
+        [
+          103,
+          61,
+          53,
+          0
+        ],
+        [
+          4,
+          25,
+          12,
+          0
+        ],
+        [
+          31,
+          32,
+          87,
+          0
+        ]
+      ],
+      "confusion_columns": [
+        "Entailment",
+        "Contradiction",
+        "NotMentioned",
+        "FAILED"
+      ],
+      "valid_pair_n": 408,
+      "flip_n": 162,
+      "decision_flip_rate": 0.39705882352941174,
+      "pair_failure_n": 0,
+      "failure_or_flip_rate_all": 0.39705882352941174,
+      "correct_preserved": 169,
+      "error_introduced": 99,
+      "error_corrected": 46,
+      "error_persisted": 94,
+      "error_introduced_rate_all": 0.2426470588235294,
+      "error_introduced_given_original_correct": 0.3694029850746269,
+      "error_corrected_rate_all": 0.11274509803921569,
+      "strict_accuracy_change": -0.12990196078431374,
+      "category_definition": "All cases, failures are incorrect; flip uses valid pairs only",
+      "ci95": {
+        "strict_accuracy": {
+          "interval": [
+            0.4877450980392157,
+            0.5686274509803921
+          ],
+          "defined_replicates": 5000
+        },
+        "valid_accuracy": {
+          "interval": [
+            0.4877450980392157,
+            0.5686274509803921
+          ],
+          "defined_replicates": 5000
+        },
+        "macro_f1": {
+          "interval": [
+            0.45489757186560054,
+            0.5251656921387811
+          ],
+          "defined_replicates": 5000
+        },
+        "decision_flip_rate": {
+          "interval": [
+            0.35784313725490197,
+            0.4387254901960784
+          ],
+          "defined_replicates": 5000
+        }
+      },
+      "output_failure_rate": 0.0,
+      "nli_latency_seconds": 274.65183080001225,
+      "nli_input_tokens": 274324,
+      "nli_output_tokens": 32310,
+      "nli_attempts": 408,
+      "first_attempt_valid_rate": 1.0,
+      "exact_quote_valid_rate": 0.765625,
+      "compressor_peak_gpu_bytes": 5718491648,
+      "compressor_load_seconds_per_process": 12.57969150000099,
+      "compression_ratio": {
+        "mean": 0.16771191342090624,
+        "median": 0.16147729381002934,
+        "p25": 0.1476552598225602,
+        "p75": 0.1810918774966711
+      },
+      "preparation_latency_seconds": 621.2585527000065,
+      "preparation_input_tokens": 0,
+      "preparation_output_tokens": 0,
+      "compressor_forward_tokens": 2648879,
+      "accumulated_context_tokens_all_17": 161056,
+      "total_latency_seconds": 895.9103835000187,
+      "total_ollama_tokens": 306634,
+      "mean_nli_latency": 0.6731662519608144,
+      "p95_nli_latency": 1.2286139750001892,
+      "external_api_cost_usd": 0,
+      "electricity_cost": "not measured",
+      "observed_stage_wall_seconds_including_process_and_model_load": 922.7012621999984,
+      "common_valid_with_original_naive": {
+        "n": 408,
+        "accuracy": 0.5269607843137255,
+        "naive_accuracy": 0.47058823529411764,
+        "original_accuracy": 0.6568627450980392
+      }
+    },
+    "long_30": {
+      "strict_accuracy": 0.5906862745098039,
+      "valid_accuracy": 0.5906862745098039,
+      "macro_f1": 0.555636218352798,
+      "coverage": 1.0,
+      "n": 408,
+      "valid_n": 408,
+      "failure_n": 0,
+      "class_metrics": {
+        "Entailment": {
+          "precision": 0.7668711656441718,
+          "recall": 0.576036866359447,
+          "f1": 0.6578947368421053,
+          "support": 217
+        },
+        "Contradiction": {
+          "precision": 0.2711864406779661,
+          "recall": 0.7804878048780488,
+          "f1": 0.4025157232704403,
+          "support": 41
+        },
+        "NotMentioned": {
+          "precision": 0.6614173228346457,
+          "recall": 0.56,
+          "f1": 0.6064981949458483,
+          "support": 150
+        }
+      },
+      "confusion_matrix": [
+        [
+          125,
+          56,
+          36,
+          0
+        ],
+        [
+          2,
+          32,
+          7,
+          0
+        ],
+        [
+          36,
+          30,
+          84,
+          0
+        ]
+      ],
+      "confusion_columns": [
+        "Entailment",
+        "Contradiction",
+        "NotMentioned",
+        "FAILED"
+      ],
+      "valid_pair_n": 408,
+      "flip_n": 119,
+      "decision_flip_rate": 0.2916666666666667,
+      "pair_failure_n": 0,
+      "failure_or_flip_rate_all": 0.2916666666666667,
+      "correct_preserved": 202,
+      "error_introduced": 66,
+      "error_corrected": 39,
+      "error_persisted": 101,
+      "error_introduced_rate_all": 0.16176470588235295,
+      "error_introduced_given_original_correct": 0.2462686567164179,
+      "error_corrected_rate_all": 0.09558823529411764,
+      "strict_accuracy_change": -0.0661764705882353,
+      "category_definition": "All cases, failures are incorrect; flip uses valid pairs only",
+      "ci95": {
+        "strict_accuracy": {
+          "interval": [
+            0.5416666666666666,
+            0.6372549019607843
+          ],
+          "defined_replicates": 5000
+        },
+        "valid_accuracy": {
+          "interval": [
+            0.5416666666666666,
+            0.6372549019607843
+          ],
+          "defined_replicates": 5000
+        },
+        "macro_f1": {
+          "interval": [
+            0.5050715309512545,
+            0.6023519062061655
+          ],
+          "defined_replicates": 5000
+        },
+        "decision_flip_rate": {
+          "interval": [
+            0.24509803921568626,
+            0.3382352941176471
+          ],
+          "defined_replicates": 5000
+        }
+      },
+      "output_failure_rate": 0.0,
+      "nli_latency_seconds": 317.84547919999386,
+      "nli_input_tokens": 420370,
+      "nli_output_tokens": 34413,
+      "nli_attempts": 408,
+      "first_attempt_valid_rate": 1.0,
+      "exact_quote_valid_rate": 0.7758007117437722,
+      "compressor_peak_gpu_bytes": 7354045952,
+      "compressor_load_seconds_per_process": 7.899815499999022,
+      "compression_ratio": {
+        "mean": 0.30654134582220577,
+        "median": 0.30562971572005704,
+        "p25": 0.28784991933488635,
+        "p75": 0.3232931726907631
+      },
+      "preparation_latency_seconds": 837.6745943000187,
+      "preparation_input_tokens": 0,
+      "preparation_output_tokens": 0,
+      "compressor_forward_tokens": 3688004,
+      "accumulated_context_tokens_all_17": 305336,
+      "total_latency_seconds": 1155.5200735000126,
+      "total_ollama_tokens": 454783,
+      "mean_nli_latency": 0.7790330372548869,
+      "p95_nli_latency": 1.3598673399994357,
+      "external_api_cost_usd": 0,
+      "electricity_cost": "not measured",
+      "observed_stage_wall_seconds_including_process_and_model_load": 1177.8236363000015,
+      "common_valid_with_original_naive": {
+        "n": 408,
+        "accuracy": 0.5906862745098039,
+        "naive_accuracy": 0.47058823529411764,
+        "original_accuracy": 0.6568627450980392
+      }
+    }
+  },
+  "paired_ci95": [
+    {
+      "contrast": "contextual minus naive",
+      "metric": "strict_accuracy",
+      "difference": 0.04166666666666663,
+      "interval": [
+        0.009803921568627416,
+        0.0759803921568627
+      ],
+      "defined_replicates": 5000
+    },
+    {
+      "contrast": "contextual minus naive",
+      "metric": "valid_accuracy",
+      "difference": 0.04166666666666663,
+      "interval": [
+        0.009803921568627416,
+        0.0759803921568627
+      ],
+      "defined_replicates": 5000
+    },
+    {
+      "contrast": "contextual minus naive",
+      "metric": "macro_f1",
+      "difference": 0.04087076049255928,
+      "interval": [
+        0.008329576760284165,
+        0.07479169084502915
+      ],
+      "defined_replicates": 5000
+    },
+    {
+      "contrast": "contextual minus naive",
+      "metric": "decision_flip_rate",
+      "difference": -0.06372549019607837,
+      "interval": [
+        -0.10784313725490191,
+        -0.022058823529411797
+      ],
+      "defined_replicates": 5000
+    },
+    {
+      "contrast": "naive minus original",
+      "metric": "strict_accuracy",
+      "difference": -0.18627450980392157,
+      "interval": [
+        -0.2524509803921569,
+        -0.12009803921568629
+      ],
+      "defined_replicates": 5000
+    },
+    {
+      "contrast": "naive minus original",
+      "metric": "valid_accuracy",
+      "difference": -0.18627450980392157,
+      "interval": [
+        -0.2524509803921569,
+        -0.12009803921568629
+      ],
+      "defined_replicates": 5000
+    },
+    {
+      "contrast": "naive minus original",
+      "metric": "macro_f1",
+      "difference": -0.16275426488767192,
+      "interval": [
+        -0.21183464696758922,
+        -0.1117880100927021
+      ],
+      "defined_replicates": 5000
+    },
+    {
+      "contrast": "naive minus original",
+      "metric": "decision_flip_rate",
+      "difference": 0.5147058823529411,
+      "interval": [
+        0.4338235294117647,
+        0.5931372549019608
+      ],
+      "defined_replicates": 5000
+    },
+    {
+      "contrast": "contextual minus original",
+      "metric": "strict_accuracy",
+      "difference": -0.14460784313725494,
+      "interval": [
+        -0.21078431372549022,
+        -0.07843137254901966
+      ],
+      "defined_replicates": 5000
+    },
+    {
+      "contrast": "contextual minus original",
+      "metric": "valid_accuracy",
+      "difference": -0.14460784313725494,
+      "interval": [
+        -0.21078431372549022,
+        -0.07843137254901966
+      ],
+      "defined_replicates": 5000
+    },
+    {
+      "contrast": "contextual minus original",
+      "metric": "macro_f1",
+      "difference": -0.12188350439511264,
+      "interval": [
+        -0.17859554466145316,
+        -0.06333286793634918
+      ],
+      "defined_replicates": 5000
+    },
+    {
+      "contrast": "contextual minus original",
+      "metric": "decision_flip_rate",
+      "difference": 0.45098039215686275,
+      "interval": [
+        0.3700980392156863,
+        0.5245098039215687
+      ],
+      "defined_replicates": 5000
+    },
+    {
+      "contrast": "long_15 minus naive",
+      "metric": "strict_accuracy",
+      "difference": 0.056372549019607865,
+      "interval": [
+        -0.019607843137254943,
+        0.13480392156862742
+      ],
+      "defined_replicates": 5000
+    },
+    {
+      "contrast": "long_15 minus naive",
+      "metric": "valid_accuracy",
+      "difference": 0.056372549019607865,
+      "interval": [
+        -0.019607843137254943,
+        0.13480392156862742
+      ],
+      "defined_replicates": 5000
+    },
+    {
+      "contrast": "long_15 minus naive",
+      "metric": "macro_f1",
+      "difference": 0.055333745728559425,
+      "interval": [
+        -0.011754373450719741,
+        0.11917223615715015
+      ],
+      "defined_replicates": 5000
+    },
+    {
+      "contrast": "long_15 minus naive",
+      "metric": "decision_flip_rate",
+      "difference": -0.11764705882352938,
+      "interval": [
+        -0.1985294117647059,
+        -0.03431372549019607
+      ],
+      "defined_replicates": 5000
+    },
+    {
+      "contrast": "long_15 minus original",
+      "metric": "strict_accuracy",
+      "difference": -0.1299019607843137,
+      "interval": [
+        -0.18382352941176472,
+        -0.07352941176470595
+      ],
+      "defined_replicates": 5000
+    },
+    {
+      "contrast": "long_15 minus original",
+      "metric": "valid_accuracy",
+      "difference": -0.1299019607843137,
+      "interval": [
+        -0.18382352941176472,
+        -0.07352941176470595
+      ],
+      "defined_replicates": 5000
+    },
+    {
+      "contrast": "long_15 minus original",
+      "metric": "macro_f1",
+      "difference": -0.10742051915911249,
+      "interval": [
+        -0.16729692007799238,
+        -0.04362960734958305
+      ],
+      "defined_replicates": 5000
+    },
+    {
+      "contrast": "long_15 minus original",
+      "metric": "decision_flip_rate",
+      "difference": 0.39705882352941174,
+      "interval": [
+        0.35784313725490197,
+        0.4387254901960784
+      ],
+      "defined_replicates": 5000
+    },
+    {
+      "contrast": "long_30 minus naive",
+      "metric": "strict_accuracy",
+      "difference": 0.12009803921568629,
+      "interval": [
+        0.056372549019607865,
+        0.18627450980392157
+      ],
+      "defined_replicates": 5000
+    },
+    {
+      "contrast": "long_30 minus naive",
+      "metric": "valid_accuracy",
+      "difference": 0.12009803921568629,
+      "interval": [
+        0.056372549019607865,
+        0.18627450980392157
+      ],
+      "defined_replicates": 5000
+    },
+    {
+      "contrast": "long_30 minus naive",
+      "metric": "macro_f1",
+      "difference": 0.12066795096694821,
+      "interval": [
+        0.06961147697298527,
+        0.16748079491700257
+      ],
+      "defined_replicates": 5000
+    },
+    {
+      "contrast": "long_30 minus naive",
+      "metric": "decision_flip_rate",
+      "difference": -0.22303921568627444,
+      "interval": [
+        -0.2990196078431373,
+        -0.1495098039215686
+      ],
+      "defined_replicates": 5000
+    },
+    {
+      "contrast": "long_30 minus original",
+      "metric": "strict_accuracy",
+      "difference": -0.06617647058823528,
+      "interval": [
+        -0.11519607843137258,
+        -0.012254901960784381
+      ],
+      "defined_replicates": 5000
+    },
+    {
+      "contrast": "long_30 minus original",
+      "metric": "valid_accuracy",
+      "difference": -0.06617647058823528,
+      "interval": [
+        -0.11519607843137258,
+        -0.012254901960784381
+      ],
+      "defined_replicates": 5000
+    },
+    {
+      "contrast": "long_30 minus original",
+      "metric": "macro_f1",
+      "difference": -0.042086313920723706,
+      "interval": [
+        -0.09291607742864148,
+        0.01230521693691683
+      ],
+      "defined_replicates": 5000
+    },
+    {
+      "contrast": "long_30 minus original",
+      "metric": "decision_flip_rate",
+      "difference": 0.2916666666666667,
+      "interval": [
+        0.24509803921568626,
+        0.3382352941176471
+      ],
+      "defined_replicates": 5000
+    }
+  ],
+  "bootstrap": {
+    "unit": "document_id",
+    "replicates": 5000,
+    "seed": 20261019
+  },
+  "split": "development",
+  "documents": 24,
+  "hypotheses": 17,
+  "created_utc": "2026-10-19T13:20:30.413393+00:00",
+  "dataset_seal_sha256": "138af3d56f47e90419066a19524d0f35248da99acca28089ea383733fbc1f6de"
+}

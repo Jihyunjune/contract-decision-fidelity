@@ -1,0 +1,41 @@
+{
+  "version": "cdf-v2-development-1",
+  "endpoint": "http://127.0.0.1:11436",
+  "summary_model": "qwen2.5:7b-instruct",
+  "decision_model": "qwen3:8b",
+  "model_digests": {
+    "summary": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+    "decision": "500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41"
+  },
+  "num_ctx": 32768,
+  "summary_num_predict": 1500,
+  "decision_num_predict": 768,
+  "temperature": 0,
+  "seed": 20261015,
+  "timeout_seconds": 600,
+  "summary_attempts": 4,
+  "decision_attempts": 2,
+  "max_words": 250,
+  "max_bullets": 20,
+  "batch_size": 1,
+  "development_sample_n": 24,
+  "development_seed": 20261019,
+  "bootstrap_replicates": 5000,
+  "bootstrap_seed": 20261019,
+  "compression_rates": [0.15, 0.30],
+  "compressor": {
+    "model_name": "NousResearch/Llama-2-7b-chat-hf",
+    "revision": "351844e75ed0bcbbe3f10671b3c808d2b83894ee",
+    "quantization": "NF4 double quantization; float16 compute",
+    "chunk_tokens": 256,
+    "iterative_size": 200,
+    "condition_in_question": "after",
+    "condition_compare": true,
+    "reorder_context": "sort",
+    "dynamic_context_compression_ratio": 0.3,
+    "context_budget": "+100"
+  },
+  "budget_selection": "On fixed development sample: highest strict accuracy; ties macro-F1 then lower realized ratio then 0.15. Selection never reads sealed references.",
+  "failure_policy": "No label imputation. Invalid summaries/compressions produce explicit null judgments. Strict accuracy and class FN include all failures.",
+  "hybrid_fallback": "Not in primary experiment; no implicit original-text fallback."
+}

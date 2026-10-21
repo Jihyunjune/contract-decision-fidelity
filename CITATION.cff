@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "Please cite ContractNLI and LongLLMLingua when using this experimental adaptation. Project author identities and repository URL await maintainer confirmation."
+title: "Contract Decision Fidelity: Evaluating Contract Summarization and Question-Aware Compression"
+type: software
+version: 2.0.0
+license: MIT
+authors:
+  - name: "Contract Decision Fidelity project contributors"
+abstract: "A reproducible adaptation of LongLLMLingua and summary-based decision fidelity evaluation to ContractNLI."
+keywords:
+  - ContractNLI
+  - LongLLMLingua
+  - natural language inference
+  - prompt compression

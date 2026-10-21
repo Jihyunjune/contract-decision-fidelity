@@ -1,0 +1,13 @@
+title = "Contract Decision Fidelity public distribution"
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = "Verified SHA-256 file checksums whose filenames contain token; not authentication tokens"
+condition = "AND"
+paths = [
+  '''configs/(tokenizers|compressor_assets)\.json$''',
+  '''results/manifests/(historical_provenance|public_files)\.json$'''
+]
+regexTarget = "match"
+regexes = ['''(?:tokenization\.py|tokenizers\.json|tokenizer(?:_config)?\.(?:json|model)|added_tokens\.json|special_tokens_map\.json)"\s*:\s*"[a-f0-9]{64}"''']

@@ -1,0 +1,31 @@
+{
+  "seed": 20261019,
+  "ids": [
+    226,
+    102,
+    517,
+    275,
+    267,
+    407,
+    410,
+    303,
+    241,
+    210,
+    378,
+    235,
+    438,
+    104,
+    399,
+    428,
+    485,
+    616,
+    143,
+    415,
+    538,
+    620,
+    572,
+    604
+  ],
+  "pool_n": 323,
+  "reason": "Fixed 24-contract development evaluation (408 hypotheses per method) limits per-hypothesis 7B compressor cost; full 100-contract sealed evaluation remains unchanged. Selected before model results."
+}
